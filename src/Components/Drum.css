@@ -1,0 +1,144 @@
+body {
+    background-color:#100e2a;
+}
+
+.wrapper {
+    border: 3px solid #ffa82e;
+    width: 20vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-around;
+    margin-top: 35vh;
+    background-color: #575757;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    row-gap: 25px;
+}
+
+.controls #powerBtn {
+    margin-bottom: 70px;
+}
+
+.slider {
+    accent-color: #ffa82e;
+}
+
+#drum-pads {
+    display: grid;
+    gap: 7px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+}
+
+#drum-pads button {
+    height: 100px;
+    width: 100px;
+    box-shadow: 1px 1px 1px;
+    font-weight: 600;
+}
+
+.display:not(:empty) {
+    border: 2.5px solid #ffa82e;
+    border-radius: 20px;
+    padding: 10px 55px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+}
+
+#checkbox {
+    display: none;
+  }
+  
+  .switch {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(99, 99, 99);
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(126, 126, 126);
+    box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
+  }
+  .switch svg {
+    width: 1.2em;
+  }
+  .switch svg path {
+    fill: rgb(48, 48, 48);
+  }
+  #checkbox:checked + .switch {
+    box-shadow: 0px 0px 1px rgb(151, 243, 255) inset,
+      0px 0px 2px rgb(151, 243, 255) inset, 0px 0px 10px rgb(151, 243, 255) inset,
+      0px 0px 40px rgb(151, 243, 255), 0px 0px 100px rgb(151, 243, 255),
+      0px 0px 5px rgb(151, 243, 255);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(146, 180, 184);
+  }
+  #checkbox:checked + .switch svg {
+    filter: drop-shadow(0px 0px 5px rgb(151, 243, 255));
+  }
+  #checkbox:checked + .switch svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  #powerBtn {
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
+  @media only screen and (min-width: 1200px) and (max-width: 2559px) {
+    .wrapper {
+      width: 35vw;
+    }
+  }
+
+  @media only screen and (min-width: 2560px) and (max-width: 2900px) {
+    .wrapper {
+      width: 25vw;
+    }
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    .wrapper {
+      width: 70vw;
+      flex-direction: column;
+      margin-top: 10vh;
+      padding: 20px;
+    }
+    .controls {
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      row-gap: 25px;
+      align-items: center;
+    }
+    #drum-pads {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 20px;
+    }
+    #drum-pads button {
+      height: 70px;
+      width: 70px;
+      box-shadow: 1px 1px 1px;
+      font-weight: 600;
+    }
+    .controls #powerBtn {
+      margin-bottom: 40px;
+    }
+  }
+
+@media only screen and (min-width: 481px) and (max-width: 1050px) {
+  .wrapper {
+    width: 70vw;
+  }
+}
